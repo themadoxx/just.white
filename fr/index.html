@@ -42,10 +42,7 @@
 
 
 <style>
-	#wrapper{
-		overflow-x: hidden!important; /* Empêche le défilement horizontal inutile */
 
-	}
 </style>
 
 <script>
@@ -64,7 +61,36 @@
     
     var products_list_functions = [];
 </script>
+<style>
+	#wrapper{
+		overflow-x: hidden!important; /* Empêche le défilement horizontal inutile */
 
+	}
+
+	.hero-section {
+	  width: 100%;
+	  display: block;
+	}
+	.hero-section img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	}
+	.images-below {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	.images-below img {
+	  width: 50%;
+	  height: auto;
+	}
+	@media (max-width: 768px) {
+	  .images-below img {
+		width: 100%;
+	  }
+	}
+  </style>
+  
     
 </head>
 
@@ -570,7 +596,14 @@
       
       
 
-    
+    <div class="hero-section">
+		<img src="lien_vers_votre_image_hero.jpg" alt="Hero Image">
+	  </div>
+	  
+	  <div class="images-below">
+		<img src="lien_vers_votre_premiere_image_en_dessous.jpg" alt="Image 1">
+		<img src="lien_vers_votre_seconde_image_en_dessous.jpg" alt="Image 2">
+	  </div>
 
     
       <section id="content" class="page-home">
@@ -580,7 +613,7 @@
           
             <!-- @file modules\appagebuilder\views\templates\hook\ApRow -->
     <div        class="row ApRow  "
-                            style=""                >
+                           >
                                             <!-- @file modules\appagebuilder\views\templates\hook\ApColumn -->
 <div    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-sp-12 sld_portail ApColumn "
 	    >
@@ -623,8 +656,7 @@
         </div>
     </div>            </div>
     <!-- @file modules\appagebuilder\views\templates\hook\ApRow -->
-    <div        class="row ApRow  "
-                            style=""                >
+    <div class="row ApRow ">
                                             <!-- @file modules\appagebuilder\views\templates\hook\ApColumn -->
 <div    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12  ApColumn "
 	    >
